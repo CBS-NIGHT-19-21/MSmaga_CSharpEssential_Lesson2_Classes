@@ -19,24 +19,20 @@ namespace Task2_Converter
 
             #region Converter - Encapsulation 
 
-            // Create an instance of converter1 of the Converter class
-            // with the transfer of actual parameters 26.5, 30.5, 0.45 to the constructor.
-            // Get a link to the address of the converter1 instance on the heap.
-            
-            Converter converter1 = new Converter(26.5, 30.5, 0.45);
+            // Create an instance of converter of the Converter class
+            // with the transfer of actual parameters 26.5m, 30.5m, 0.45m to the constructor.
+            // Get a link to the address of the converter instance on the heap.
+             
+            Converter converter = new Converter(26.5m, 30.5m, 0.45m);
 
             // Display the results of the Converter class methods
             // from an object of class Converter through a link
-            // which contains the converter1 instance of the Converter class.
-            Console.WriteLine("USD  = {0:F2}", converter1.GetHRfromUSD(133));
-            Console.WriteLine("Euro = {0:F2}", converter1.GetHRfromEuro(133));
-            Console.WriteLine("Rub  = {0:F2}", converter1.GetHRfromRub(133));
-            Console.WriteLine(new String('=', 15));
+            // which contains the converter instance of the Converter class.
 
-            Console.WriteLine("USD  = {0:F2}", converter1.GetUSDfromHR(193));
-            Console.WriteLine("Euro = {0:F2}", converter1.GetEurofromHR(193));
-            Console.WriteLine("Rub  = {0:F2}", converter1.GetRubfromHR(193));
-            Console.WriteLine(new String('=', 15));
+            converter.Exchange(1319, "USD", "HR");
+
+            // Delay
+            Console.ReadLine();
 
             #endregion
         }
