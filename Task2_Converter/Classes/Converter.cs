@@ -11,13 +11,12 @@ class Converter
     // Several variables on one line to reduce the vulnerability window.
     private decimal _exchRateHRtoUSD, _exchRateHRtoEuro, _exchRateHRtoRub;
 
-
     // Declaration of a custom method of the constructor of the class object.
     // Initialize the fields of the created object.
-    public Converter(decimal usd, decimal eur, decimal rub)
+    public Converter(decimal usd, decimal euro, decimal rub)
     {
         _exchRateHRtoUSD = usd;
-        _exchRateHRtoEuro = eur;
+        _exchRateHRtoEuro = euro;
         _exchRateHRtoRub = rub;
     }
 

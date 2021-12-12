@@ -19,17 +19,17 @@ namespace Task2_Converter
 
             #region Converter - Encapsulation 
 
-            // Create an instance of converter of the Converter class
-            // with the transfer of actual parameters 26.5m, 30.5m, 0.45m to the constructor.
+            // Instance the Converter class
+            // with the transfer of actual parameters 26.5m, 30.5m, 0.45m into the constructor.
             // Get a link to the address of the converter instance on the heap.
              
-            Converter converter = new Converter(26.5m, 30.5m, 0.45m);
+            Converter myConverter = new Converter(usd:26.5m, euro:30.5m, rub:0.45m);
 
             // Display the results of the Converter class methods
             // from an object of class Converter through a link
             // which contains the converter instance of the Converter class.
 
-            converter.Exchange(1319, "USD", "HR");
+            myConverter.Exchange(amount:1319, fromValue:"HR", toValue:"USD");
 
             // Delay
             Console.ReadLine();
