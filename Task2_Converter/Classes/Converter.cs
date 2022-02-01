@@ -1,6 +1,4 @@
-﻿
-
-// !!!Realize the Object-oriented programming principle - Encapsulation (hiding the implementation).
+﻿// !!!Realize the Object-oriented programming principle - Encapsulation (hiding the implementation).
 // Encapsulate data set and methods for working on it as an object.
 // Declarate class of this kind of objects.
 // Declarate the method to constructor an object of this class
@@ -9,7 +7,7 @@ class Converter
     // Private(accessible only within this class) - encapsulation(hiding the implementation).
     // Declare with readonly to initialize in constructor only
     // Several variables on one line to reduce the vulnerability window.
-    private decimal _exchRateHRtoUSD, _exchRateHRtoEuro, _exchRateHRtoRub;
+    private readonly decimal _exchRateHRtoUSD, _exchRateHRtoEuro, _exchRateHRtoRub;
 
     // Declaration of a custom method of the constructor of the class object.
     // Initialize the fields of the created object.
@@ -19,7 +17,6 @@ class Converter
         _exchRateHRtoEuro = euro;
         _exchRateHRtoRub = rub;
     }
-
 
     /// <summary>
     /// Calcs Exchange Amount, using private methods of the Converter class.
@@ -48,11 +45,8 @@ class Converter
     /// </summary>
     /// <param name="amountUSD"></param>
     /// <returns>decimal HR</returns>
-    private decimal GetHRfromUSD(decimal amountUSD)
-    {
-        return amountUSD * _exchRateHRtoUSD;
-    }
-
+    private decimal GetHRfromUSD(decimal amountUSD) => amountUSD * _exchRateHRtoUSD;
+ 
     // Declaration of the custom GetUSDfromHR() method of the class object
     // close for access from outside the class.
     /// <summary>
@@ -60,11 +54,8 @@ class Converter
     /// </summary>
     /// <param name="amountUSD"></param>
     /// <returns>decimal USD</returns>
-    private decimal GetUSDfromHR(decimal amountHr)
-    {
-        return amountHr / _exchRateHRtoUSD;
-    }
-
+    private decimal GetUSDfromHR(decimal amountHr) => amountHr / _exchRateHRtoUSD;
+ 
     // Declaration of the custom GetHRfromEuro() method of the class object
     // close for access from outside the class.
     /// <summary>
@@ -72,10 +63,7 @@ class Converter
     /// </summary>
     /// <param name="amountUSD"></param>
     /// <returns>decimal HR</returns>
-    private decimal GetHRfromEuro(decimal amountEuro)
-    {
-        return amountEuro * _exchRateHRtoEuro;
-    }
+    private decimal GetHRfromEuro(decimal amountEuro) => amountEuro * _exchRateHRtoEuro;
 
     // Declaration of the custom GetEurofromHR() method of the class object
     // close for access from outside the class.
@@ -84,11 +72,8 @@ class Converter
     /// </summary>
     /// <param name="amountUSD"></param>
     /// <returns>decimal Euro</returns>
-    private decimal GetEurofromHR(decimal amountHr)
-    {
-        return amountHr / _exchRateHRtoEuro;
-    }
-
+    private decimal GetEurofromHR(decimal amountHr) => amountHr / _exchRateHRtoEuro;
+ 
     // Declaration of the custom GetHRfromRub() method of the class object
     // close for access from outside the class.
     /// <summary>
@@ -96,11 +81,8 @@ class Converter
     /// </summary>
     /// <param name="amountUSD"></param>
     /// <returns>decimal HR</returns>
-    private decimal GetHRfromRub(decimal amountRub)
-    {
-        return amountRub * _exchRateHRtoRub;
-    }
-
+    private decimal GetHRfromRub(decimal amountRub) => amountRub * _exchRateHRtoRub;
+ 
     // Declaration of the custom GetRubfromHR() method of the class object
     // close for access from outside the class.
     /// <summary>
@@ -108,9 +90,6 @@ class Converter
     /// </summary>
     /// <param name="amountUSD"></param>
     /// <returns>decimal Rub</returns>
-    private decimal GetRubfromHR(decimal amountHr)
-    {
-        return amountHr / _exchRateHRtoRub;
-    }
+    private decimal GetRubfromHR(decimal amountHr) => amountHr / _exchRateHRtoRub;
 }
 

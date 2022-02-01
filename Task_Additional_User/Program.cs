@@ -2,7 +2,7 @@
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             #region Задание Дополнительное
             // Используя Visual Studio, создайте проект по шаблону Console Application. 
@@ -15,7 +15,7 @@
 
             #region User - Encapsulation
 
-            User user1 = new User("Admin", "Bill", "Gates", 66);
+            User user1 = new ("Admin", "Bill", "Gates", 66);
 
             // Call the Show () method of the User class from the class object through a link
             // which contains an instance of user1 of the User class.
@@ -24,7 +24,7 @@
             // Create an instance of user2 of the User class
             // with passing the actual parameters "User", "Steve", "McConnell", 54 to the constructor
             // Get a link to the address of the user2 instance on the heap.
-            User user2 = new User("User", "Steve", " McConnell", 54);
+            User user2 = new ("User", "Steve", " McConnell", 54);
 
             // Call the Show () method of the User class from the class object through a link
             // which contains an instance of user2 of the User class.

@@ -2,7 +2,7 @@
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             #region Задание 4
             // Используя Visual Studio, создайте проект по шаблону Console Application. 
@@ -20,7 +20,7 @@
             // Create an instance of invoice1 of the Invoice class
             // with passing the actual parameters 1131911010, "Tom Henks", "Hortons and Bro" to the constructor.
             // Get a link to the address of the invoice1 instance on the heap.
-            Invoice invoice1 = new Invoice(1131911010, "Tom Henks", "Hortons and Bro");
+            Invoice invoice1 = new (1131911010, "Tom Henks", "Hortons and Bro");
 
             // Create an instance of invoice1 of the Invoice class
             // with passing the actual parameters "Boots", 4 to the constructor
@@ -38,7 +38,7 @@
             // Create an instance of invoice2 of the Invoice class
             // passing the actual parameters 234234234, "Tom Hardy", "Jonson and Jonson" to the constructor
             // Get a link to the address of the invoice2 instance on the heap.
-            Invoice invoice2 = new Invoice(234234234, "Tom Hardy", "Jonson and Jonson");
+            Invoice invoice2 = new (234234234, "Tom Hardy", "Jonson and Jonson");
 
             // Create an instance of invoice2 of the Invoice class
             // with passing the actual parameters "Shirt", 13 to the constructor

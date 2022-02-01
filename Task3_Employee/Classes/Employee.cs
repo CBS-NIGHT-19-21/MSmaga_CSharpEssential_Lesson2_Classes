@@ -51,7 +51,7 @@ class Employee
     /// </summary>
     /// <param name="role"></param>
     /// <returns>decimal Base Salary</returns>
-    private decimal GetBaseSalary(string role)
+    private decimal GetBaseSalary()
     {
         switch (_role)
         {
@@ -73,7 +73,7 @@ class Employee
     /// </summary>
     /// <param name="experience"></param>
     /// <returns>decimal Experience Coef</returns>
-    private decimal GetExperienceCoef(double experience)
+    private decimal GetExperienceCoef()
     {
         bool isExper0to3 = _experience <= 3;
         bool isExper3to5 = (_experience >= 3) && (_experience <= 5);
@@ -114,7 +114,7 @@ class Employee
     {
         _role = role;
         _experience = experience;
-        _salary = GetBaseSalary(role) * GetExperienceCoef(experience);
+        _salary = this.GetBaseSalary() * this.GetExperienceCoef();
     }
 
     // Declaration of the custom GetTaxPayment () method of the class object
@@ -122,11 +122,8 @@ class Employee
     /// <summary>
     /// Calculates the tax on the total price of the item.
     /// </summary>
-    public void GetTaxPayment()
-    {
-        _taxPay = _salary * TAX_PAYMENT;
-    }
-
+    public void GetTaxPayment() => _taxPay = _salary * TAX_PAYMENT;
+ 
     // Declaration of the custom Show () method of the class object
     // open for access from outside the class
     /// <summary>
@@ -143,7 +140,4 @@ class Employee
         Console.WriteLine("Salary: {0:F2} $ included Tax pay: {1:F2} $", Salary, TaxPay);
         Console.WriteLine(new String('=', 46) + "\n");
     }
-
-
-
 }

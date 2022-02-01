@@ -15,7 +15,7 @@ class Invoice
 
     // Initialize fields as they are not formal parameters
     // object constructor which will be initialized.
-    private string _article = String.Empty;
+    private string? _article;
     private int _quantity;
     private decimal _totalCost, _vat;
 
@@ -34,7 +34,7 @@ class Invoice
     // Create object properties as an interface for accessing private fields
     // encapsulation (hiding the implementation)
     // Read only.
-    public string Article { get { return _article; } }
+    public string Article { get { return _article!; } }
     public int Quantity { get { return _quantity; } }
     public int Account { get { return _account; } }
     public string Customer { get { return _customer; } }
@@ -52,9 +52,9 @@ class Invoice
     /// </summary>
     /// <param name="article"></param>
     /// <returns>decimal Price</returns>
-    private decimal GetPrice(string article)
+    private decimal GetPrice()
     {
-        switch (article)
+        switch (_article)
         {
             case "Hat": return 50;
             case "Shirt": return 100;
@@ -77,7 +77,7 @@ class Invoice
     {
         _article = article;
         _quantity = quantity;
-        _totalCost = quantity * GetPrice(article);
+        _totalCost = quantity * this.GetPrice();
     }
 
     // Declaration of the custom GetVAT () method of the class object
@@ -85,10 +85,7 @@ class Invoice
     /// <summary>
     /// Calculates the VAT of the total price of the item
     /// </summary>
-    public void GetVAT()
-    {
-        _vat = _totalCost * VAT;
-    }
+    public void GetVAT() => _vat = _totalCost* VAT;
 
     // Declaration of the custom Show () method of the class object
     // open for access from outside the class

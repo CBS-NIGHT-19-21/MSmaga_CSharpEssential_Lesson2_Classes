@@ -2,7 +2,7 @@
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             #region Задание 3
             //Используя Visual Studio, создайте проект по шаблону Console Application. 
@@ -20,7 +20,7 @@
             // Create an instance of aStaff1 of the Employee class
             // with passing the actual parameters "John", "Smith" to the constructor.
             // Get a reference to the address of aStaff1 instance on the heap.
-            Employee aStaff1 = new Employee("John", "Smith");
+            Employee aStaff1 = new ("John", "Smith");
 
             // Call the GetSalary () method of the Employee class with passing
             // actual parameters "Worker", 8, from the class object through the link
@@ -37,7 +37,7 @@
             // Create an instance of aStaff2 of the Employee class
             // with passing the actual parameters "Tim", "Hortons" to the constructor.
             // Get a reference to the address of aStaff2 instance on the heap.
-            Employee aStaff2 = new Employee("Tim", "Hortons");
+            Employee aStaff2 = new ("Tim", "Hortons");
 
             // Call the GetSalary () method of the Employee class with passing
             // actual parameters "Engineer", 3, from the class object through a reference
@@ -54,7 +54,7 @@
             // Create an instance of aStaff3 of the Employee class
             // with passing the actual parameters "James", "Hetfield" to the constructor
             // Get a reference to the address of aStaff3 instance on the heap.
-            Employee aStaff3 = new Employee("James", "Hetfield");
+            Employee aStaff3 = new ("James", "Hetfield");
 
             // Call the GetSalary () method of the Employee class with passing
             // actual parameters "Head", 5, from the class object via a link
@@ -71,7 +71,7 @@
             // Create an instance of aStaff4 of the Employee class
             // with passing the actual parameters "Jim", "Carry" to the constructor
             // Get a reference to the address of aStaff4 instance on the heap.
-            Employee aStaff4 = new Employee("Jim", "Carry");
+            Employee aStaff4 = new ("Jim", "Carry");
 
             // Call the GetSalary () method of the Employee class with passing
             // actual parameters "Director", 1, from the class object through a link

@@ -1,10 +1,8 @@
-﻿using System;
-
-namespace Task2_Converter
+﻿namespace Task2_Converter
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             #region Задание 2
             // Используя Visual Studio, создайте проект по шаблону Console Application. 
@@ -23,7 +21,7 @@ namespace Task2_Converter
             // with the transfer of actual parameters 26.5m, 30.5m, 0.45m into the constructor.
             // Get a link to the address of the converter instance on the heap.
              
-            Converter myConverter = new Converter(usd:26.5m, euro:30.5m, rub:0.45m);
+            Converter myConverter = new (usd:26.5m, euro:30.5m, rub:0.45m);
 
             // Display the results of the Converter class methods
             // from an object of class Converter through a link
